@@ -1,3 +1,4 @@
+import { CapitalizadoPipe } from './pipes/capitalizado.pipe';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
@@ -19,7 +20,8 @@ import { ROUTES } from './app.routes';
     SearchComponent,
     SharedComponent,
     ArtistaComponent,
-    NavbarComponent
+    NavbarComponent,
+    CapitalizadoPipe
   ],
   imports: [
     BrowserModule,
