@@ -12,6 +12,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 // importo rutas
 import { ROUTES } from './app.routes';
+import { NoImagePipe } from './pipes/no-image.pipe';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { ROUTES } from './app.routes';
     SharedComponent,
     ArtistaComponent,
     NavbarComponent,
-    CapitalizadoPipe
+    CapitalizadoPipe,
+    NoImagePipe
   ],
   imports: [
     BrowserModule,
