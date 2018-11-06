@@ -1,25 +1,26 @@
-import { SpotifyService } from './../../services/spotify.service';
-import { Component } from '@angular/core';
+import { SpotifyService } from "./../../services/spotify.service";
+import { Component } from "@angular/core";
 
 @Component({
-  selector: 'app-search',
-  templateUrl: './search.component.html',
+  selector: "app-search",
+  templateUrl: "./search.component.html",
   styles: []
 })
 export class SearchComponent {
-
   artistas: any[] = [];
   loading: boolean;
-  constructor(private spotify: SpotifyService) { 
-  }
-  
-  buscar(termino: String){
-    this.loading = true;
+  constructor(private spotify: SpotifyService) {}
 
-    this.spotify.getArtist(termino)
-      .subscribe( (data: any) => {
+  buscar(termino: String) {
+    if (termino != "") {
+      this.loading = true;
+
+      this.spotify.getArtist(termino).subscribe((data: any) => {
         this.artistas = data;
         this.loading = false;
-      })
+      });
+    } else {
+      this.artistas = null;
+    }
   }
 }

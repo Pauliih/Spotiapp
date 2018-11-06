@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-artista',
@@ -7,8 +8,10 @@ import { Component } from '@angular/core';
 })
 export class ArtistaComponent {
 
-  constructor() { }
-
-
+  constructor(private router: ActivatedRoute) { 
+    this.router.params.subscribe(params => {
+      console.log(params['id']);
+    })
+  }
 
 }
