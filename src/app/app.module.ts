@@ -3,16 +3,17 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
-import { HomeComponent } from './component/home/home.component';
-import { SearchComponent } from './component/search/search.component';
-import { SharedComponent } from './component/shared/shared.component';
-import { ArtistaComponent } from './component/artista/artista.component';
-import { NavbarComponent } from './component/shared/navbar/navbar.component';
+import { HomeComponent } from './components/home/home.component';
+import { SearchComponent } from './components/search/search.component';
+import { SharedComponent } from './components/shared/shared.component';
+import { ArtistaComponent } from './components/artista/artista.component';
+import { NavbarComponent } from './components/shared/navbar/navbar.component';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 // importo rutas
 import { ROUTES } from './app.routes';
 import { NoImagePipe } from './pipes/no-image.pipe';
+import { TarjetasComponent } from './components/tarjetas/tarjetas.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { NoImagePipe } from './pipes/no-image.pipe';
     ArtistaComponent,
     NavbarComponent,
     CapitalizadoPipe,
-    NoImagePipe
+    NoImagePipe,
+    TarjetasComponent
   ],
   imports: [
     BrowserModule,
